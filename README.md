@@ -22,6 +22,9 @@ CONFIGURAÇÃO
 -------------
 
 ### Database
+![alt text](https://raw.githubusercontent.com/danilocfranca/biblioteca/master/web/biblioteca.png)
+
+
 Criar database a partir do script biblioteca.sql e editar o arquivo `config/db.php` com os dados do database:
 
 ```php
