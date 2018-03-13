@@ -1,7 +1,7 @@
 Biblioteca
 ============================
 
-![alt text](https://github.com/danilocfranca/biblioteca/master/web/tela.png)
+![alt text](https://raw.githubusercontent.com/danilocfranca/biblioteca/master/web/tela.png)
 
 Um sistema administrativo de cadastro de livros, categorias, usuários e dashboard. Um
 sistema de empréstimo de livros, o qual o usuário após efetuar o login, pode alterar seus
