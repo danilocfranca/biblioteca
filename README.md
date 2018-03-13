@@ -67,6 +67,12 @@ Jquery:
 
 HTML5: utilizado nos campos de data
 
-Bootstrap 3: template utilizado
+Bootstrap 3: template
 
 Framework: Yii 2
+
+
+CASO DE USO
+---------------------------
+
+![alt text](https://raw.githubusercontent.com/danilocfranca/biblioteca/master/web/use_case.png)
