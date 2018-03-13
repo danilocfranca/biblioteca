@@ -1,11 +1,12 @@
 Biblioteca
 ============================
 
+![alt text](https://github.com/danilocfranca/biblioteca/master/tela.png)
+
 Um sistema administrativo de cadastro de livros, categorias, usuários e dashboard. Um
 sistema de empréstimo de livros, o qual o usuário após efetuar o login, pode alterar seus
 dados de cadastro, realizar empréstimos de livros disponíveis e acompanhar empréstimos
 em aberto ou já realizados.
-
 
 
 REQUIREMENTS
@@ -36,3 +37,31 @@ return [
 ### Url de acesso
 
 http://localhost/biblioteca/web/index.php?r=admin
+
+REQUISITOS DESENVOLVIMENTO
+---------------------------
+Jquery: 
+
+```javascript
+   $(document).ready(function(){
+        $('#emprestimo-data_prevista_devolucao').on('blur', function(){
+            custoEmprestimo();
+        });
+    });
+
+    function custoEmprestimo(){
+        var start = new Date($('#emprestimo-data_retirada').val());
+        var end = new Date($('#emprestimo-data_prevista_devolucao').val());
+
+        var diff = new Date(end - start);
+
+        var days = diff/1000/60/60/24;
+        var custo_emprestimo = $('#custo_emprestimo').val();
+        var custo = custo_emprestimo * days;
+        $('#emprestimo-valor_emprestimo').val(custo);
+    }
+```
+
+HTML5: utilizado nos campos de data
+Bootstrap 3: template utilizado
+Framework: Yii 2

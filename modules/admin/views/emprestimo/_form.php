@@ -69,23 +69,23 @@ Não possui livros disponíveis para emprestimo
 <?php endif;?>
 
 <script>
-    $(document).ready(function(){
-        $('#emprestimo-data_prevista_devolucao').on('blur', function(){
-            custoEmprestimo();
+        $(document).ready(function(){
+            $('#emprestimo-data_prevista_devolucao').on('blur', function(){
+                custoEmprestimo();
+            });
         });
-    });
 
-    function custoEmprestimo(){
-        var start = new Date($('#emprestimo-data_retirada').val());
-        var end = new Date($('#emprestimo-data_prevista_devolucao').val());
+        function custoEmprestimo(){
+            var start = new Date($('#emprestimo-data_retirada').val());
+            var end = new Date($('#emprestimo-data_prevista_devolucao').val());
 
-        var diff = new Date(end - start);
+            var diff = new Date(end - start);
 
-        var days = diff/1000/60/60/24;
-        var custo_emprestimo = $('#custo_emprestimo').val();
-        var custo = custo_emprestimo * days;
-        $('#emprestimo-valor_emprestimo').val(custo);
-    }
+            var days = diff/1000/60/60/24;
+            var custo_emprestimo = $('#custo_emprestimo').val();
+            var custo = custo_emprestimo * days;
+            $('#emprestimo-valor_emprestimo').val(custo);
+        }
 
     function custoPagar(){
         var start = new Date($('#emprestimo-data_retirada').val());
